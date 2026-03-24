@@ -1,20 +1,26 @@
-/* --- 1. CARDS BACKGROUND ONLY --- */
-.MuiPaper-root.Mui-packageCard-OFS-card {
+/* --- 1. GLOBAL TYPOGRAPHY & FONT SMOOTHING --- */
+.MuiTypography-root, 
+.MuiTypography-body1 {
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    color: #090607 !important; 
+    letter-spacing: normal !important; 
+    font-weight: normal !important; 
+    -webkit-font-smoothing: antialiased !important; 
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* --- 2. CARDS BACKGROUND & SHAPE --- */
+.MuiPaper-root.Mui-packageCard-OFS-card,
+.MuiPaper-root.Mui-specialOffer-OFS-card { 
     background-color: #F0E8E6 !important;
     height: auto !important;
     min-height: 100% !important;
     padding-bottom: 20px !important; 
-    border-radius: 16px !important; /* Adds the soft, rounded corners to the cards */
-    overflow: hidden !important; /* Ensures nothing spills over the new rounded edges */
+    border-radius: 16px !important; 
+    overflow: hidden !important; 
 }
 
-/* --- 2. "NOT LOGGED IN" TEXT --- */
-.Mui-logged-OFS-text {
-    font-family: 'Alte Haas Grotesk', sans-serif !important;
-    color: #090607 !important;
-}
-
-/* --- 3. ALL BUTTONS (Including "Login") --- */
+/* --- 3. ALL BUTTONS --- */
 button, 
 .MuiButton-root, 
 .MuiButton-contained, 
@@ -26,10 +32,10 @@ button,
     box-shadow: none !important;
 }
 
-/* Target the text inside the button specifically */
 .MuiButton-label {
     font-family: 'Alte Haas Grotesk', sans-serif !important;
     font-size: 1rem !important; 
+    letter-spacing: normal !important;
 }
 
 button:hover, .MuiButton-root:hover {
@@ -37,29 +43,21 @@ button:hover, .MuiButton-root:hover {
     background-color: #D1D1EC !important;
 }
 
-/* --- 4. TOP HEADER & PACKAGE TITLES --- */
-/* Main "Packages" Header */
+/* --- 4. TOP MAIN HEADER --- */
 .Mui-cardsList-OFS-title {
     font-family: 'Blur Pro', sans-serif !important;
-    color: #090607 !important;
     font-size: 2.2rem !important; 
     letter-spacing: 0.01em !important; 
     margin-bottom: 20px !important; 
 }
 
-/* Individual Card Titles ("Constellation Pack") */
+/* --- 5. PACKAGE CARDS (Standard) --- */
 .Mui-packageCard-OFS-title {
-    font-family: 'Alte Haas Grotesk', sans-serif !important;
-    color: #090607 !important;
     font-size: 1.5rem !important; 
-    letter-spacing: 0.01em !important; 
     margin-bottom: 12px !important; 
 }
 
-/* --- 5. PACKAGE DESCRIPTION & PRICE --- */
 .Mui-packageCard-OFS-subtitle {
-    font-family: 'Alte Haas Grotesk', sans-serif !important;
-    color: #090607 !important;
     font-size: 1rem !important; 
     line-height: 1.5 !important; 
     white-space: normal !important;
@@ -70,9 +68,38 @@ button:hover, .MuiButton-root:hover {
     margin-bottom: 16px !important;
 }
 
+.Mui-specialOffer-OFS-title {
+    font-family: 'Blur Pro', sans-serif !important;
+    font-size: 1.5rem !important; 
+    margin-bottom: 12px !important; 
+    color: #FCF8F5 !important; 
+}
+
+.Mui-specialOffer-OFS-description {
+    font-size: 1rem !important; 
+    line-height: 1.5 !important; 
+    white-space: normal !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    overflow: visible !important;
+    display: block !important;
+    margin-bottom: 16px !important;
+    color: #FCF8F5 !important; 
+}
+
+.Mui-specialOffer-OFS-bold {
+    font-weight: bold !important; 
+    color: #FCF8F5 !important; 
+}
+
+/* --- 7. PRICES --- */
 .Mui-packageCard-OFS-price {
-    font-family: 'Alte Haas Grotesk', sans-serif !important;
-    color: #090607 !important;
     font-size: 1.15rem !important; 
-    font-weight: bold !important;
+    font-weight: normal !important; 
+}
+
+.Mui-specialOffer-OFS-price {
+    color: #FCF8F5 !important;
+    font-size: 1.15rem !important; 
+    font-weight: normal !important; 
 }
