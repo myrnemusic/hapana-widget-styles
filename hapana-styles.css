@@ -1,0 +1,70 @@
+/* --- 1. IMPORT CUSTOM FONTS --- */
+@font-face {
+    font-family: 'Blur Pro';
+    src: url('https://static1.squarespace.com/static/6969e703a39fb40cb8c0b188/t/69c26160e094f42c0b229ab1/1774346592118/BlurPro-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    src: url('https://static1.squarespace.com/static/6969e703a39fb40cb8c0b188/t/69c2616e57e8e462d35a81b7/1774346606891/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+
+/* --- 2. WIDGET BACKGROUND --- */
+/* Target the main background areas */
+.MuiPaper-root, .MuiContainer-root, [data-type="packages"] {
+    background-color: #F0E8E6 !important;
+}
+
+/* --- 3. TOP HEADER --- */
+/* "Packages" */
+.Mui-cardsList-OFS-title {
+    font-family: 'Blur Pro', sans-serif !important;
+    color: #090607 !important;
+}
+
+/* --- 4. PACKAGE CARDS --- */
+/* Package Title ("Constellation Pack") */
+.Mui-packageCard-OFS-title {
+    font-family: 'Blur Pro', sans-serif !important;
+    color: #090607 !important;
+}
+
+/* Package Description & Override Ellipsis */
+.Mui-packageCard-OFS-subtitle {
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    color: #090607 !important;
+    /* Overrides the 2-line cutoff so the full text shows */
+    white-space: normal !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+/* Price */
+.Mui-packageCard-OFS-price {
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    color: #090607 !important;
+}
+
+/* Allow the card to expand in height for the longer text */
+.Mui-packageCard-OFS-card {
+    height: auto !important;
+    min-height: 100% !important;
+    padding-bottom: 20px !important; 
+}
+
+/* --- 5. BUTTONS --- */
+button, .MuiButton-root, .MuiButton-contained {
+    background-color: #D1D1EC !important;
+    color: #090607 !important;
+    border-radius: 50px !important; /* Rounded pill shape */
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    box-shadow: none !important;
+}
+
+/* Button Hover State */
+button:hover, .MuiButton-root:hover, .MuiButton-contained:hover {
+    opacity: 0.8 !important;
+    background-color: #D1D1EC !important;
+}
