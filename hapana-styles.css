@@ -1,70 +1,78 @@
-/* --- 1. IMPORT CUSTOM FONTS --- */
-@font-face {
-    font-family: 'Blur Pro';
-    src: url('https://static1.squarespace.com/static/6969e703a39fb40cb8c0b188/t/69c26160e094f42c0b229ab1/1774346592118/BlurPro-Medium.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Alte Haas Grotesk';
-    src: url('https://static1.squarespace.com/static/6969e703a39fb40cb8c0b188/t/69c2616e57e8e462d35a81b7/1774346606891/AlteHaasGroteskRegular.ttf') format('truetype');
-}
-
-/* --- 2. WIDGET BACKGROUND --- */
-/* Target the main background areas */
-.MuiPaper-root, .MuiContainer-root, [data-type="packages"] {
+/* --- 1. CARDS BACKGROUND ONLY --- */
+.MuiPaper-root.Mui-packageCard-OFS-card {
     background-color: #F0E8E6 !important;
+    height: auto !important;
+    min-height: 100% !important;
+    padding-bottom: 20px !important; 
+    border-radius: 16px !important; /* Adds the soft, rounded corners to the cards */
+    overflow: hidden !important; /* Ensures nothing spills over the new rounded edges */
 }
 
-/* --- 3. TOP HEADER --- */
-/* "Packages" */
+/* --- 2. "NOT LOGGED IN" TEXT --- */
+.Mui-logged-OFS-text {
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    color: #090607 !important;
+}
+
+/* --- 3. ALL BUTTONS (Including "Login") --- */
+button, 
+.MuiButton-root, 
+.MuiButton-contained, 
+.MuiButton-textPrimary {
+    background-color: #D1D1EC !important;
+    color: #090607 !important;
+    border-radius: 50px !important; 
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    box-shadow: none !important;
+}
+
+/* Target the text inside the button specifically */
+.MuiButton-label {
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
+    font-size: 1rem !important; 
+}
+
+button:hover, .MuiButton-root:hover {
+    opacity: 0.8 !important;
+    background-color: #D1D1EC !important;
+}
+
+/* --- 4. TOP HEADER & PACKAGE TITLES --- */
+/* Main "Packages" Header */
 .Mui-cardsList-OFS-title {
     font-family: 'Blur Pro', sans-serif !important;
     color: #090607 !important;
+    font-size: 2.2rem !important; 
+    letter-spacing: 0.01em !important; 
+    margin-bottom: 20px !important; 
 }
 
-/* --- 4. PACKAGE CARDS --- */
-/* Package Title ("Constellation Pack") */
+/* Individual Card Titles ("Constellation Pack") */
 .Mui-packageCard-OFS-title {
-    font-family: 'Blur Pro', sans-serif !important;
+    font-family: 'Alte Haas Grotesk', sans-serif !important;
     color: #090607 !important;
+    font-size: 1.5rem !important; 
+    letter-spacing: 0.01em !important; 
+    margin-bottom: 12px !important; 
 }
 
-/* Package Description & Override Ellipsis */
+/* --- 5. PACKAGE DESCRIPTION & PRICE --- */
 .Mui-packageCard-OFS-subtitle {
     font-family: 'Alte Haas Grotesk', sans-serif !important;
     color: #090607 !important;
-    /* Overrides the 2-line cutoff so the full text shows */
+    font-size: 1rem !important; 
+    line-height: 1.5 !important; 
     white-space: normal !important;
     -webkit-line-clamp: unset !important;
     line-clamp: unset !important;
     overflow: visible !important;
     display: block !important;
+    margin-bottom: 16px !important;
 }
 
-/* Price */
 .Mui-packageCard-OFS-price {
     font-family: 'Alte Haas Grotesk', sans-serif !important;
     color: #090607 !important;
-}
-
-/* Allow the card to expand in height for the longer text */
-.Mui-packageCard-OFS-card {
-    height: auto !important;
-    min-height: 100% !important;
-    padding-bottom: 20px !important; 
-}
-
-/* --- 5. BUTTONS --- */
-button, .MuiButton-root, .MuiButton-contained {
-    background-color: #D1D1EC !important;
-    color: #090607 !important;
-    border-radius: 50px !important; /* Rounded pill shape */
-    font-family: 'Alte Haas Grotesk', sans-serif !important;
-    box-shadow: none !important;
-}
-
-/* Button Hover State */
-button:hover, .MuiButton-root:hover, .MuiButton-contained:hover {
-    opacity: 0.8 !important;
-    background-color: #D1D1EC !important;
+    font-size: 1.15rem !important; 
+    font-weight: bold !important;
 }
