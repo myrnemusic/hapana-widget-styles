@@ -105,3 +105,46 @@ button:hover, .MuiButton-root:hover {
     font-size: 1.15rem !important; 
     font-weight: normal !important; 
 }
+
+/* --- 8. MODAL ACTIONS LAYOUT (Spacing) --- */
+.MuiDialogActions-root.Mui-signUpModal-OFS-dialogActions {
+    display: flex !important;
+    flex-direction: column !important; /* Stacks the elements vertically */
+    align-items: center !important; /* Centers them in the modal */
+    gap: 24px !important; /* Creates the distinct line of empty space between them */
+    padding-bottom: 32px !important; /* Adds some breathing room at the bottom of the modal */
+}
+
+/* Material-UI adds default margins to dialog buttons that mess up our gap. This kills them. */
+.Mui-signUpModal-OFS-dialogActions > * {
+    margin: 0 !important;
+}
+
+/* --- 9. "NEXT" BUTTON RESIZING --- */
+#button-signUpModalNext {
+    width: auto !important; /* Stops it from stretching to fill the modal width */
+    min-width: 160px !important; /* Sets a nice, compact minimum width */
+    padding: 10px 24px !important; /* Trims down the bulky height */
+}
+
+/* --- 10. "ALREADY HAVE AN ACCOUNT" LINK FIX --- */
+/* This strips away the pill background/shape from our global rule and reverts it to text */
+button#signUpModalAlreadyHaveAccount,
+.Mui-signUpModal-OFS-link.MuiLink-button {
+    background-color: transparent !important;
+    color: #090607 !important;
+    padding: 0 !important;
+    height: auto !important;
+    text-transform: none !important; /* Ensures it reads as a normal sentence */
+}
+
+/* Add a subtle fade effect when they hover over the text link */
+button#signUpModalAlreadyHaveAccount:hover {
+    background-color: transparent !important;
+    opacity: 0.7 !important;
+}
+
+/* Ensures the 'Sign in now' portion stays bold */
+span.Mui-signUpModal-OFS-bold {
+    font-weight: bold !important;
+}
