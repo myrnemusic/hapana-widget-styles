@@ -48,6 +48,7 @@ button:hover, .MuiButton-root:hover {
 /* --- 4. TOP MAIN HEADER --- */
 .Mui-cardsList-OFS-title {
     font-family: 'Blur Pro', sans-serif !important;
+    color: #4f1423 !important;
     font-size: 2.2rem !important; 
     letter-spacing: 0.01em !important; 
     margin-bottom: 20px !important; 
