@@ -1,4 +1,4 @@
-/* version v3 as of 30.06.26  */
+/* version v4 as of 30.06.26  */
 
 /* --- 1. GLOBAL TYPOGRAPHY & FONT SMOOTHING --- */
 .MuiTypography-root, 
@@ -158,4 +158,16 @@ span.Mui-signUpModal-OFS-bold {
     }
 
     .Mui-packageCard-OFS-card .MuiButton-label,
-    .Mui-special
+    .Mui-specialOffer-OFS-card .MuiButton-label {
+        font-size: 0.85rem !important; 
+    }
+
+    /* Fixes the "Intro Offer" badge jutting out and scales it down */
+    .Mui-specialOffer-OFS-title {
+        font-size: 1.1rem !important; 
+        padding: 4px 12px !important; 
+        margin-left: 0 !important; 
+        transform: none !important; 
+        display: inline-block !important; 
+    }
+}
