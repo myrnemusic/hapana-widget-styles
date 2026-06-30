@@ -1,4 +1,4 @@
-/*  version v2 as of 01.4.26  */
+/* version v3 as of 30.06.26  */
 
 /* --- 1. GLOBAL TYPOGRAPHY & FONT SMOOTHING --- */
 .MuiTypography-root, 
@@ -71,6 +71,7 @@ button:hover, .MuiButton-root:hover {
     margin-bottom: 16px !important;
 }
 
+/* --- 6. SPECIAL OFFER CARDS --- */
 .Mui-specialOffer-OFS-title {
     font-family: 'Blur Pro', sans-serif !important;
     font-size: 1.5rem !important; 
@@ -110,42 +111,51 @@ button:hover, .MuiButton-root:hover {
 /* --- 8. MODAL ACTIONS LAYOUT (Spacing) --- */
 .MuiDialogActions-root.Mui-signUpModal-OFS-dialogActions {
     display: flex !important;
-    flex-direction: column !important; /* Stacks the elements vertically */
-    align-items: center !important; /* Centers them in the modal */
-    gap: 24px !important; /* Creates the distinct line of empty space between them */
-    padding-bottom: 32px !important; /* Adds some breathing room at the bottom of the modal */
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    padding-bottom: 32px !important;
 }
 
-/* Material-UI adds default margins to dialog buttons that mess up our gap. This kills them. */
 .Mui-signUpModal-OFS-dialogActions > * {
     margin: 0 !important;
 }
 
 /* --- 9. "NEXT" BUTTON RESIZING --- */
 #button-signUpModalNext {
-    width: auto !important; /* Stops it from stretching to fill the modal width */
-    min-width: 160px !important; /* Sets a nice, compact minimum width */
-    padding: 10px 24px !important; /* Trims down the bulky height */
+    width: auto !important;
+    min-width: 160px !important;
+    padding: 10px 24px !important;
 }
 
 /* --- 10. "ALREADY HAVE AN ACCOUNT" LINK FIX --- */
-/* This strips away the pill background/shape from our global rule and reverts it to text */
 button#signUpModalAlreadyHaveAccount,
 .Mui-signUpModal-OFS-link.MuiLink-button {
     background-color: transparent !important;
     color: #090607 !important;
     padding: 0 !important;
     height: auto !important;
-    text-transform: none !important; /* Ensures it reads as a normal sentence */
+    text-transform: none !important;
 }
 
-/* Add a subtle fade effect when they hover over the text link */
 button#signUpModalAlreadyHaveAccount:hover {
     background-color: transparent !important;
     opacity: 0.7 !important;
 }
 
-/* Ensures the 'Sign in now' portion stays bold */
 span.Mui-signUpModal-OFS-bold {
     font-weight: bold !important;
 }
+
+/* --- 11. MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .Mui-packageCard-OFS-card button,
+    .Mui-specialOffer-OFS-card button {
+        padding: 6px 14px !important; 
+        max-width: 100% !important; 
+        min-width: unset !important; 
+        width: 100% !important; 
+    }
+
+    .Mui-packageCard-OFS-card .MuiButton-label,
+    .Mui-special
